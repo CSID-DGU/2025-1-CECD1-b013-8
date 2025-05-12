@@ -1,0 +1,117 @@
+.test-body {
+    display: flex;
+    gap: 0px;
+    padding: 0px;
+}
+
+.chatContainer {
+    width: 45vw;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.chatBubble {
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 12px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.system {
+    border-left: 5px solid #555;
+}
+
+.selectBox {
+    border: none;
+    font-weight: bold;
+    background: none;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.chatBubble p {
+    margin: 0;
+}
+
+.user {
+    background-color: #eee;
+}
+
+.inputArea {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.resultArea {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+    width: 50%;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.system-textarea {
+    flex: 1;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    resize: none;
+    min-height: 50vh;
+}
+
+.user-textarea {
+    flex: 1;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    resize: none;
+    min-height: 15vh;
+}
+
+.result-textarea {
+    flex: 1;
+    width: 95%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    resize: none;
+    min-height: 75vh;
+}
+
+.fileUploadArea {
+    margin: 16px 0;
+  }
+  
+  .fileUploadLabel {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .fileInput {
+    display: none;
+  }
+  
+  .fileName {
+    font-size: 13px;
+    margin-top: 4px;
+    color: #555;
+  }
+
+.sendBtn {
+    margin-top: 10px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 12px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
