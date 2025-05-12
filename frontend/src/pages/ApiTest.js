@@ -21,7 +21,7 @@ const ApiTest = () => {
         if (!userMessage.trim()) return;
 
         setLoading(true);
-        console.log(systemPrompt);
+        console.log("모델: " + selectedModel + "\n프롬프트: \n" + systemPrompt);
 
         const file = await client.files.create({
             file: selectedFile,
