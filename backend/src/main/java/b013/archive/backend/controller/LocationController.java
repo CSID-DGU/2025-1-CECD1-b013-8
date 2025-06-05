@@ -18,7 +18,7 @@ public class LocationController {
 
     private final LocationService locationService;
 
-    // 음식 조회
+    // 장소 조회
     @GetMapping("/{id}")
     public ResponseEntity<LocationDto.LocationResponseDto> getLocationById(@PathVariable int id) {
         LocationDto.LocationResponseDto responseDto = locationService.getLocationById(id);
@@ -27,7 +27,7 @@ public class LocationController {
         return ResponseEntity.ok(responseDto);
     }
 
-    // 전체 음식 조회
+    // 전체 장소 조회
     @GetMapping
     public ResponseEntity<List<LocationDto.LocationResponseDto>> getLocationList() {
         List<LocationDto.LocationResponseDto> locationList = locationService.getAllLocation();

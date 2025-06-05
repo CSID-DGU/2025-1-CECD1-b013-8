@@ -18,7 +18,7 @@ public class EventTimeController {
 
     private final EventTimeService eventTimeService;
 
-    // 음식 조회
+    // 사건 시간 조회
     @GetMapping("/{id}")
     public ResponseEntity<EventTimeDto.EventTimeResponseDto> getEventTimeById(@PathVariable int id) {
         EventTimeDto.EventTimeResponseDto responseDto = eventTimeService.getEventTimeById(id);
@@ -27,7 +27,7 @@ public class EventTimeController {
         return ResponseEntity.ok(responseDto);
     }
 
-    // 전체 음식 조회
+    // 전체 사건 시간 조회
     @GetMapping
     public ResponseEntity<List<EventTimeDto.EventTimeResponseDto>> getEventTimeList() {
         List<EventTimeDto.EventTimeResponseDto> eventTimeList = eventTimeService.getAllEventTime();

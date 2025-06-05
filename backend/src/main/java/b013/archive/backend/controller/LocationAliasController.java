@@ -18,7 +18,7 @@ public class LocationAliasController {
 
     private final LocationAliasService locationAliasService;
 
-    // 음식 조회
+    // 장소 별칭 조회
     @GetMapping("/{id}")
     public ResponseEntity<LocationAliasDto.LocationAliasResponseDto> getLocationAliasById(@PathVariable int id) {
         LocationAliasDto.LocationAliasResponseDto responseDto = locationAliasService.getLocationAliasById(id);
@@ -27,7 +27,7 @@ public class LocationAliasController {
         return ResponseEntity.ok(responseDto);
     }
 
-    // 전체 음식 조회
+    // 전체 장소 별칭 조회
     @GetMapping
     public ResponseEntity<List<LocationAliasDto.LocationAliasResponseDto>> getLocationAliasList() {
         List<LocationAliasDto.LocationAliasResponseDto> locationAliasList = locationAliasService.getAllLocationAlias();

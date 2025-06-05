@@ -18,7 +18,7 @@ public class EventLocationController {
 
     private final EventLocationService eventLocationService;
 
-    // 음식 조회
+    // 사건 장소 조회
     @GetMapping("/{id}")
     public ResponseEntity<EventLocationDto.EventLocationResponseDto> getEventLocationById(@PathVariable int id) {
         EventLocationDto.EventLocationResponseDto responseDto = eventLocationService.getEventLocationById(id);
@@ -27,7 +27,7 @@ public class EventLocationController {
         return ResponseEntity.ok(responseDto);
     }
 
-    // 전체 음식 조회
+    // 전체 사건 장소 조회
     @GetMapping
     public ResponseEntity<List<EventLocationDto.EventLocationResponseDto>> getEventLocationList() {
         List<EventLocationDto.EventLocationResponseDto> eventLocationList = eventLocationService.getAllEventLocation();

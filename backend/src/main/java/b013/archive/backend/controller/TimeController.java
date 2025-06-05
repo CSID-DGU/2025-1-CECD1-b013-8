@@ -18,7 +18,7 @@ public class TimeController {
 
     private final TimeService timeService;
 
-    // 음식 조회
+    // 시간 조회
     @GetMapping("/{id}")
     public ResponseEntity<TimeDto.TimeResponseDto> getTimeById(@PathVariable int id) {
         TimeDto.TimeResponseDto responseDto = timeService.getTimeById(id);
@@ -27,7 +27,7 @@ public class TimeController {
         return ResponseEntity.ok(responseDto);
     }
 
-    // 전체 음식 조회
+    // 전체 시간 조회
     @GetMapping
     public ResponseEntity<List<TimeDto.TimeResponseDto>> getTimeList() {
         List<TimeDto.TimeResponseDto> timeList = timeService.getAllTime();

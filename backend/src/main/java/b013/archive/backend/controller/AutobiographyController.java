@@ -18,7 +18,7 @@ public class AutobiographyController {
 
     private final AutobiographyService autobiographyService;
 
-    // 음식 조회
+    // 자서전 조회
     @GetMapping("/{id}")
     public ResponseEntity<AutobiographyDto.AutobiographyResponseDto> getAutobiographyById(@PathVariable int id) {
         AutobiographyDto.AutobiographyResponseDto responseDto = autobiographyService.getAutobiographyById(id);
@@ -27,7 +27,7 @@ public class AutobiographyController {
         return ResponseEntity.ok(responseDto);
     }
 
-    // 전체 음식 조회
+    // 전체 자서전 조회
     @GetMapping
     public ResponseEntity<List<AutobiographyDto.AutobiographyResponseDto>> getAutobiographyList() {
         List<AutobiographyDto.AutobiographyResponseDto> autobiographyList = autobiographyService.getAllAutobiography();

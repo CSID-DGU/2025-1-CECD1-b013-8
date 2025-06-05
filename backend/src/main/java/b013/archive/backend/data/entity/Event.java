@@ -1,6 +1,5 @@
 package b013.archive.backend.data.entity;
 
-import b013.archive.backend.model.EventType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,16 +20,11 @@ public class Event implements Serializable {
     @JoinColumn(name="autobiography_id", referencedColumnName="id")
     private Autobiography autobiography;
 
-    @Column(columnDefinition = "ENUM()")
-    @Enumerated(EnumType.STRING)
-    private EventType type;
-
     private String name;
 
     @Builder
-    protected Event(Autobiography autobiography, EventType type, String name) {
+    protected Event(Autobiography autobiography, String name) {
         this.autobiography = autobiography;
-        this.type = type;
         this.name = name;
     }
 }

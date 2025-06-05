@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import ApiTest from "./pages/ApiTest";
+import ApiTest from "./pages/ApiTest/ApiTest";
 
 function App() {
   return (

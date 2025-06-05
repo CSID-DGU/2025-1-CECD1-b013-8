@@ -1,6 +1,5 @@
 package b013.archive.backend.data.entity;
 
-import b013.archive.backend.model.EventType;
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -18,7 +18,7 @@ public class UserController {
 
     private final UserService userService;
 
-    // 음식 조회
+    // 유저 조회
     @GetMapping("/{id}")
     public ResponseEntity<UserDto.UserResponseDto> getUserById(@PathVariable int id) {
         UserDto.UserResponseDto responseDto = userService.getUserById(id);
@@ -27,7 +27,7 @@ public class UserController {
         return ResponseEntity.ok(responseDto);
     }
 
-    // 전체 음식 조회
+    // 전체 유저 조회
     @GetMapping
     public ResponseEntity<List<UserDto.UserResponseDto>> getUserList() {
         List<UserDto.UserResponseDto> userList = userService.getAllUser();

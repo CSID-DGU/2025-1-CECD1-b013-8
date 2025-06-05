@@ -18,7 +18,7 @@ public class EventPersonController {
 
     private final EventPersonService eventPersonService;
 
-    // 음식 조회
+    // 사건 인물 조회
     @GetMapping("/{id}")
     public ResponseEntity<EventPersonDto.EventPersonResponseDto> getEventPersonById(@PathVariable int id) {
         EventPersonDto.EventPersonResponseDto responseDto = eventPersonService.getEventPersonById(id);
@@ -27,7 +27,7 @@ public class EventPersonController {
         return ResponseEntity.ok(responseDto);
     }
 
-    // 전체 음식 조회
+    // 전체 사건 인물 조회
     @GetMapping
     public ResponseEntity<List<EventPersonDto.EventPersonResponseDto>> getEventPersonList() {
         List<EventPersonDto.EventPersonResponseDto> eventPersonList = eventPersonService.getAllEventPerson();
