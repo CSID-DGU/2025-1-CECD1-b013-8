@@ -3,15 +3,18 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import ApiTest from "./pages/ApiTest/ApiTest";
 import SearchCard from "./pages/SearchCard";
+import AutobioViewer from "./pages/AutobioViewer/AutobioViewer";
 
 function App() {
   return (
     <Router>
-        <Routes>
-          <Route path="/" element={<ApiTest />} />
-          <Route path="/side" element={<SearchCard />} />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/" element={<ApiTest />} />
+        <Route path="/side" element={<SearchCard />} />
+        <Route path="/" element={<ApiTest />} />
+        <Route path="/view" element={<AutobioViewer />} />
+      </Routes>
+    </Router>
   );
 }
 
