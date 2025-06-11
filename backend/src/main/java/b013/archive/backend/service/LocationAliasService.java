@@ -1,6 +1,8 @@
 package b013.archive.backend.service;
 
 import b013.archive.backend.data.dto.LocationAliasDto;
+import b013.archive.backend.data.dto.LocationDto;
+import b013.archive.backend.data.entity.Location;
 import b013.archive.backend.data.entity.LocationAlias;
 import b013.archive.backend.data.repository.LocationAliasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,13 @@ import java.util.stream.Collectors;
 public class LocationAliasService {
     @Autowired
     private LocationAliasRepository locationAliasRepository;
+
+    // 장소 별칭 생성
+    public LocationAlias createLocationAlias(LocationAliasDto.LocationAliasSaveDto requestDto) {
+        LocationAlias locationAlias = requestDto.toEntity();
+
+        return locationAliasRepository.save(locationAlias);
+    }
 
     public List<LocationAliasDto.LocationAliasResponseDto> getAllLocationAlias() {
         List<LocationAlias> locationAlias = locationAliasRepository.findAll();

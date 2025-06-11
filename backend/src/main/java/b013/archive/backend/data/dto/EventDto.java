@@ -12,11 +12,13 @@ public class EventDto {
     public static class EventSaveDto{
         private Autobiography autobiography;
         private String name;
+        private int page;
 
         public Event toEntity() {
             return Event.builder()
                     .autobiography(autobiography)
                     .name(name)
+                    .page(page)
                     .build();
         }
     }
@@ -33,11 +35,14 @@ public class EventDto {
         private Autobiography autobiography;
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
         private String name;
+        @JsonInclude(JsonInclude.Include.NON_DEFAULT)
+        private int page;
 
         public EventResponseDto(Event event) {
             this.id = event.getId();
             this.autobiography = event.getAutobiography();
             this.name = event.getName();
+            this.page = event.getPage();
         }
     }
 }

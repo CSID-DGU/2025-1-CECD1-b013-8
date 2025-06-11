@@ -14,6 +14,13 @@ public class PersonService {
     @Autowired
     private PersonRepository personRepository;
 
+    // 인물 생성
+    public Person createPerson(PersonDto.PersonSaveDto requestDto) {
+        Person person = requestDto.toEntity();
+
+        return personRepository.save(person);
+    }
+    
     public List<PersonDto.PersonResponseDto> getAllPerson() {
         List<Person> person = personRepository.findAll();
 

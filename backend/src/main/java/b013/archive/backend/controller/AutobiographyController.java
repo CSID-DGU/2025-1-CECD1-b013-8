@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/autobiography")
+@RequestMapping("/autobiographies")
 public class AutobiographyController {
 
     private final AutobiographyService autobiographyService;

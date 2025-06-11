@@ -14,6 +14,11 @@ public class EventTimeService {
     @Autowired
     private EventTimeRepository eventTimeRepository;
 
+    // 사건-시간 연결
+    public void linkEventTime(int event_id, int time_id) {
+        eventTimeRepository.saveByCompositeId(event_id, time_id);
+    }
+    
     public List<EventTimeDto.EventTimeResponseDto> getAllEventTime() {
         List<EventTime> eventTime = eventTimeRepository.findAll();
 

@@ -14,6 +14,13 @@ public class EventService {
     @Autowired
     private EventRepository eventRepository;
 
+    // 장소 생성
+    public Event createEvent(EventDto.EventSaveDto requestDto) {
+        Event event = requestDto.toEntity();
+
+        return eventRepository.save(event);
+    }
+
     public List<EventDto.EventResponseDto> getAllEvent() {
         List<Event> event = eventRepository.findAll();
 

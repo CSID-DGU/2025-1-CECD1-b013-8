@@ -14,6 +14,13 @@ public class PersonAliasService {
     @Autowired
     private PersonAliasRepository personAliasRepository;
 
+    // 인물 별칭 생성
+    public PersonAlias createPersonAlias(PersonAliasDto.PersonAliasSaveDto requestDto) {
+        PersonAlias personAlias = requestDto.toEntity();
+
+        return personAliasRepository.save(personAlias);
+    }
+    
     public List<PersonAliasDto.PersonAliasResponseDto> getAllPersonAlias() {
         List<PersonAlias> personAlias = personAliasRepository.findAll();
 

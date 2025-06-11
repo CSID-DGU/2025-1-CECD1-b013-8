@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/eventTime")
+@RequestMapping("/event-time")
 public class EventTimeController {
 
     private final EventTimeService eventTimeService;

@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/eventPerson")
+@RequestMapping("/event-person")
 public class EventPersonController {
 
     private final EventPersonService eventPersonService;

@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import OpenAI from "openai";
+import jsonData from '../../assets/autobiographyData.json'; // JSON 파일 import
+import DataImporter from '../../components/common/DataImporter/DataImporter'
 
 import "./ApiTest.css";
 
@@ -16,10 +18,13 @@ const ApiTest = () => {
     const [selectedFile, setSelectedFile] = useState("");
     const [selectedModel, setSelectedModel] = useState("gpt-4.1"); // 기본 모델
 
+    useEffect(() => {
+        setResult(JSON.stringify(jsonData, null, 2));
+        console.log(jsonData);
+    }, []);
+
     // 요청 버튼
     const handleSend = async () => {
-        if (!userMessage.trim()) return;
-
         setLoading(true);
         console.log("모델: " + selectedModel + "\n프롬프트: \n" + systemPrompt);
 
@@ -50,6 +55,8 @@ const ApiTest = () => {
                         ],
                     },
                 ],
+                temperature: 0.5,
+                top_p: 1
             });
 
             setResult(response.output_text);
@@ -131,6 +138,7 @@ const ApiTest = () => {
                     readOnly
                     value={result}
                 />
+                <DataImporter data={jsonData} />
             </div>
         </div>
     );

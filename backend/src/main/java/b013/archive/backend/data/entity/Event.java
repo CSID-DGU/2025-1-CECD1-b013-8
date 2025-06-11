@@ -22,9 +22,12 @@ public class Event implements Serializable {
 
     private String name;
 
+    private int page;
+
     @Builder
-    protected Event(Autobiography autobiography, String name) {
+    protected Event(Autobiography autobiography, String name, int page) {
         this.autobiography = autobiography;
         this.name = name;
+        this.page = page;
     }
 }

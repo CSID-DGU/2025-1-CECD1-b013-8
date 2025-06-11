@@ -14,6 +14,11 @@ public class EventPersonService {
     @Autowired
     private EventPersonRepository eventPersonRepository;
 
+    // 사건-인물 연결
+    public void linkEventPerson(int event_id, int person_id) {
+        eventPersonRepository.saveByCompositeId(event_id, person_id);
+    }
+    
     public List<EventPersonDto.EventPersonResponseDto> getAllEventPerson() {
         List<EventPerson> eventPerson = eventPersonRepository.findAll();
 

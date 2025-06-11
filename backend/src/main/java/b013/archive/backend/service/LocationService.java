@@ -14,6 +14,13 @@ public class LocationService {
     @Autowired
     private LocationRepository locationRepository;
 
+    // 장소 생성
+    public Location createLocation(LocationDto.LocationSaveDto requestDto) {
+        Location location = requestDto.toEntity();
+
+        return locationRepository.save(location);
+    }
+
     public List<LocationDto.LocationResponseDto> getAllLocation() {
         List<Location> location = locationRepository.findAll();
 

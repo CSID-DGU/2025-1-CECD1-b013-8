@@ -14,6 +14,13 @@ public class TimeService {
     @Autowired
     private TimeRepository timeRepository;
 
+    // 장소 생성
+    public Time createTime(TimeDto.TimeSaveDto requestDto) {
+        Time time = requestDto.toEntity();
+
+        return timeRepository.save(time);
+    }
+    
     public List<TimeDto.TimeResponseDto> getAllTime() {
         List<Time> time = timeRepository.findAll();
 

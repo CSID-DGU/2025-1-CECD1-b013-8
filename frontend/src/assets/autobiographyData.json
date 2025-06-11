@@ -1,0 +1,163 @@
+{
+  "events": [
+    {
+      "name": "소년 시절 동막골의 소개와 생활",
+      "time": { "year": 1960, "month": null, "day": null },
+      "people": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      "places": [1, 2, 3, 4, 5, 6, 7, 8],
+      "page": 8
+    },
+    {
+      "name": "재호의 소학교 입학과 학교 생활",
+      "time": { "year": null, "month": null, "day": null },
+      "people": [1, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "places": [9],
+      "page": 14
+    },
+    {
+      "name": "안양공고 입학과 한기수 선생님과의 만남",
+      "time": { "year": 1969, "month": null, "day": null },
+      "people": [1, 22, 23, 24],
+      "places": [10],
+      "page": 19
+    },
+    {
+      "name": "해태제과 취업과정과 공장 생활",
+      "time": { "year": 1973, "month": null, "day": null },
+      "people": [1, 25, 26],
+      "places": [11, 12],
+      "page": 23
+    },
+    {
+      "name": "탄생의 비밀과 어린 시절 이야기",
+      "time": { "year": 1952, "month": 11, "day": 24 },
+      "people": [1, 5, 27, 28, 29],
+      "places": [13, 14],
+      "page": 30
+    },
+    {
+      "name": "아내와의 첫 만남과 약혼",
+      "time": { "year": 1974, "month": 4, "day": null },
+      "people": [1, 30, 31, 32, 33],
+      "places": [15, 16, 17],
+      "page": 34
+    },
+    {
+      "name": "철도인의 삶 시작",
+      "time": { "year": 1975, "month": 3, "day": 25 },
+      "people": [1, 34, 35],
+      "places": [18, 19, 20],
+      "page": 39
+    },
+    {
+      "name": "군 입대와 귀향",
+      "time": { "year": 1975, "month": 8, "day": 26 },
+      "people": [1, 30, 36, 37],
+      "places": [21, 22, 23],
+      "page": 44
+    },
+    {
+      "name": "동생의 교통사고와 가족의 슬픔",
+      "time": { "year": 1977, "month": 12, "day": 17 },
+      "people": [1, 38, 39, 40],
+      "places": [24, 25],
+      "page": 57
+    },
+    {
+      "name": "아버지의 별세",
+      "time": { "year": 1985, "month": 7, "day": 17 },
+      "people": [1, 27, 41],
+      "places": [26, 27, 28],
+      "page": 62
+    },
+    {
+      "name": "할머니의 유언과 집을 지키는 결심",
+      "time": { "year": 1988, "month": 2, "day": 15 },
+      "people": [1, 5],
+      "places": [1],
+      "page": 69
+    },
+    {
+      "name": "노조 활동과 직장생활의 마무리",
+      "time": { "year": 1980, "month": null, "day": null },
+      "people": [1, 42],
+      "places": [29],
+      "page": 146
+    }
+  ],
+  "people": [
+    { "id": 1, "name": "재호", "alias": ["소년", "나", "주인공"], "description": "자서전 주인공, 남성, 동막골 출신" },
+    { "id": 2, "name": "보용", "alias": [], "description": "동막골 친구" },
+    { "id": 3, "name": "할로", "alias": [], "description": "동막골 친구" },
+    { "id": 4, "name": "태선", "alias": [], "description": "동막골 친구" },
+    { "id": 5, "name": "봉덕", "alias": [], "description": "동막골 친구" },
+    { "id": 6, "name": "요석", "alias": [], "description": "동막골 친구" },
+    { "id": 7, "name": "희광이", "alias": [], "description": "동막골 친구" },
+    { "id": 8, "name": "재호네 집 식구들", "alias": ["식구들"], "description": "재호 가족" },
+    { "id": 9, "name": "재호의 아버지", "alias": ["아버지"], "description": "재호의 아버지" },
+    { "id": 10, "name": "재호의 할머니", "alias": ["할머니"], "description": "재호의 할머니, 신앙심 깊음" },
+    { "id": 11, "name": "재호의 동생", "alias": ["동생", "아우"], "description": "재호의 하나뿐인 동생" },
+    { "id": 12, "name": "최명순 선생님", "alias": ["담임선생님"], "description": "재호의 초등학교 담임" },
+    { "id": 13, "name": "유기웅 선생님", "alias": ["담임선생님"], "description": "재호의 6학년 담임" },
+    { "id": 14, "name": "명희", "alias": [], "description": "국민학교 친구" },
+    { "id": 15, "name": "철우", "alias": [], "description": "국민학교 친구" },
+    { "id": 16, "name": "쌍둥이 친구", "alias": [], "description": "국민학교 친구" },
+    { "id": 17, "name": "양계장 집 친구", "alias": [], "description": "국민학교 친구" },
+    { "id": 18, "name": "점동네 여자친구", "alias": [], "description": "국민학교 시절 첫사랑" },
+    { "id": 19, "name": "성찬이", "alias": [], "description": "중고등학교 동창" },
+    { "id": 20, "name": "안양공고 친구들", "alias": [], "description": "고등학교 동창들" },
+    { "id": 21, "name": "교회 친구들", "alias": [], "description": "교회에서 함께한 친구들" },
+    { "id": 22, "name": "한기수 선생님", "alias": [], "description": "국어 교사, 수필집 저자" },
+    { "id": 23, "name": "성찬이 딸", "alias": [], "description": "성찬이의 딸" },
+    { "id": 24, "name": "교회 목사님", "alias": [], "description": "재호가 다닌 교회의 목사" },
+    { "id": 25, "name": "집사님", "alias": ["금성유업 상무"], "description": "해태제과 취업을 도와준 집사" },
+    { "id": 26, "name": "집사님 사모님", "alias": ["전도사님"], "description": "해태제과 집사님의 부인" },
+    { "id": 27, "name": "재호의 어머니", "alias": ["어머니"], "description": "재호의 어머니" },
+    { "id": 28, "name": "목사님(오메기 성결교회)", "alias": [], "description": "재호가 젖을 얻은 교회의 목사" },
+    { "id": 29, "name": "젖을 먹여준 아기 엄마", "alias": [], "description": "재호가 젖을 얻은 아기 엄마" },
+    { "id": 30, "name": "아내", "alias": ["처", "숙자씨"], "description": "재호의 아내" },
+    { "id": 31, "name": "고모부", "alias": [], "description": "아내의 고모부" },
+    { "id": 32, "name": "아내의 부모님", "alias": ["장인, 장모"], "description": "아내의 부모" },
+    { "id": 33, "name": "고모", "alias": [], "description": "재호의 고모" },
+    { "id": 34, "name": "친척아저씨", "alias": [], "description": "철도직원 모집을 알려준 친척" },
+    { "id": 35, "name": "인천역 직원들", "alias": [], "description": "인천역 동료들" },
+    { "id": 36, "name": "아내의 작은 아버님", "alias": ["처 작은 아버님"], "description": "약혼식 장소 제공" },
+    { "id": 37, "name": "내무반 선배", "alias": [], "description": "군 입대 당시 내무반 선배" },
+    { "id": 38, "name": "동생의 담임선생님", "alias": [], "description": "중학교 1학년 때 동생의 담임" },
+    { "id": 39, "name": "차주", "alias": [], "description": "교통사고 가해자" },
+    { "id": 40, "name": "차주의 아들", "alias": [], "description": "교통사고 운전자" },
+    { "id": 41, "name": "아버지의 친척", "alias": [], "description": "아버지의 친척" },
+    { "id": 42, "name": "노조 동지", "alias": ["6·28동지"], "description": "철도 노조 활동 동지" }
+  ],
+  "places": [
+    { "id": 1, "name": "동막골", "alias": ["동막골 마을"], "description": "군포에 위치한 재호의 고향 마을" },
+    { "id": 2, "name": "흐린 내 개울", "alias": [], "description": "동막골 앞의 개울" },
+    { "id": 3, "name": "맑은 내 개울", "alias": [], "description": "동막골 인근 개울" },
+    { "id": 4, "name": "공동묘지", "alias": [], "description": "동막골 근처 산 너머에 위치" },
+    { "id": 5, "name": "재호네 집", "alias": [], "description": "동막골 중심에 위치한 집" },
+    { "id": 6, "name": "마을 연못", "alias": [], "description": "동막골 중심의 연못" },
+    { "id": 7, "name": "마을 공동우물", "alias": [], "description": "재호네 집 옆 공동 우물" },
+    { "id": 8, "name": "참외밭 원두막", "alias": [], "description": "재호네 밭의 원두막" },
+    { "id": 9, "name": "국민학교", "alias": ["소학교"], "description": "재호가 다닌 초등학교" },
+    { "id": 10, "name": "안양공고", "alias": ["안양공업고등학교"], "description": "재호가 다닌 고등학교" },
+    { "id": 11, "name": "해태제과", "alias": ["금성유업"], "description": "재호가 근무한 제과회사" },
+    { "id": 12, "name": "드라이아이스 공장", "alias": [], "description": "해태제과 내 근무지" },
+    { "id": 13, "name": "오메기 성결교회", "alias": ["고천성결교회"], "description": "재호 가족이 다닌 교회" },
+    { "id": 14, "name": "교회", "alias": [], "description": "재호가 젖을 얻었던 교회" },
+    { "id": 15, "name": "목포", "alias": [], "description": "아내의 고향, 첫 만남의 장소" },
+    { "id": 16, "name": "유달산", "alias": [], "description": "목포의 산, 첫 데이트 장소" },
+    { "id": 17, "name": "일로", "alias": [], "description": "목포 인근, 택시 탄 장소" },
+    { "id": 18, "name": "인천역", "alias": [], "description": "재호의 철도 첫 근무지" },
+    { "id": 19, "name": "역전구내", "alias": [], "description": "인천역 내 구역" },
+    { "id": 20, "name": "동양화학", "alias": [], "description": "인천역에서 먼 화학공장" },
+    { "id": 21, "name": "만안국민학교", "alias": [], "description": "군 입대 집결지" },
+    { "id": 22, "name": "안양역", "alias": [], "description": "입영 열차 탑승역" },
+    { "id": 23, "name": "연무대역", "alias": [], "description": "논산 수송연대 도착역" },
+    { "id": 24, "name": "수원 매교동 화장터", "alias": [], "description": "동생의 유골을 화장한 곳" },
+    { "id": 25, "name": "오봉산 당정리", "alias": [], "description": "폭우 때 축사가 떠내려간 곳" },
+    { "id": 26, "name": "중앙병원", "alias": [], "description": "아버지의 임종 병원" },
+    { "id": 27, "name": "오메기 안동네", "alias": [], "description": "장례 치른 곳" },
+    { "id": 28, "name": "고천리", "alias": [], "description": "재호가 어릴 때 살던 곳" },
+    { "id": 29, "name": "서울역", "alias": [], "description": "직장생활의 주요 근무지" }
+  ]
+}
