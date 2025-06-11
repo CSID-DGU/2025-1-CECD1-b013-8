@@ -11,7 +11,6 @@ function App() {
       <Routes>
         <Route path="/" element={<ApiTest />} />
         <Route path="/side" element={<SearchCard />} />
-        <Route path="/" element={<ApiTest />} />
         <Route path="/view" element={<AutobioViewer />} />
       </Routes>
     </Router>
