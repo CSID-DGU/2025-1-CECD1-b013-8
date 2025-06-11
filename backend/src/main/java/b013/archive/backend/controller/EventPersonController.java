@@ -1,13 +1,12 @@
 package b013.archive.backend.controller;
 
 import b013.archive.backend.data.dto.EventPersonDto;
+import b013.archive.backend.data.entity.EventPerson;
 import b013.archive.backend.service.EventPersonService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,6 +16,15 @@ import java.util.List;
 public class EventPersonController {
 
     private final EventPersonService eventPersonService;
+
+    // 사건-인물 등록
+    @PostMapping
+    public ResponseEntity<EventPerson> createEventPerson(@RequestBody EventPersonDto.EventPersonSaveDto dto) {
+        EventPerson saved = eventPersonService.linkEventPerson(dto);
+
+        System.out.println(HttpStatus.CREATED);
+        return new ResponseEntity<>(saved, HttpStatus.CREATED);
+    }
 
     // 사건 인물 조회
     @GetMapping("/{id}")

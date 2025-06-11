@@ -1,6 +1,9 @@
 package b013.archive.backend.controller;
 
+import b013.archive.backend.data.dto.EventDto;
 import b013.archive.backend.data.dto.EventLocationDto;
+import b013.archive.backend.data.entity.Event;
+import b013.archive.backend.data.entity.EventLocation;
 import b013.archive.backend.service.EventLocationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -18,14 +21,11 @@ public class EventLocationController {
 
     // 사건-장소 등록
     @PostMapping
-    public ResponseEntity<EventLocationDto.EventLocationSaveDto> createEventLocation(@RequestParam int event_id, @RequestParam int location_id) {
-        System.out.println("====================SAVE====================");
-        System.out.println(event_id);
-        System.out.println(location_id);
+    public ResponseEntity<EventLocation> createEventLocation(@RequestBody EventLocationDto.EventLocationSaveDto dto) {
+        EventLocation saved = eventLocationService.linkEventLocation(dto);
 
-        eventLocationService.linkEventLocation(event_id, location_id);
-
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        System.out.println(HttpStatus.CREATED);
+        return new ResponseEntity<>(saved, HttpStatus.CREATED);
     }
 
     // 사건 장소 조회

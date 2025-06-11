@@ -15,8 +15,10 @@ public class EventPersonService {
     private EventPersonRepository eventPersonRepository;
 
     // 사건-인물 연결
-    public void linkEventPerson(int event_id, int person_id) {
-        eventPersonRepository.saveByCompositeId(event_id, person_id);
+    public EventPerson linkEventPerson(EventPersonDto.EventPersonSaveDto requestDto) {
+        EventPerson eventPerson = requestDto.toEntity();
+
+        return eventPersonRepository.save(eventPerson);
     }
     
     public List<EventPersonDto.EventPersonResponseDto> getAllEventPerson() {

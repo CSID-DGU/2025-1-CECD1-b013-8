@@ -93,11 +93,9 @@ const DataImporter = (data) => {
                 for (const personId of event.people) {
                     const newPersonId = mappings.person[personId];
                     if (newPersonId) {
-                        await axios.post('/event-person', null, {
-                            params: {
-                                eventid: newEventId,
-                                personid: newPersonId
-                            }
+                        await axios.post('/event-person', {
+                            eventid: newEventId,
+                            personid: newPersonId
                         });
                     }
                 }
@@ -106,11 +104,9 @@ const DataImporter = (data) => {
                 for (const placeId of event.places) {
                     const newPlaceId = mappings.place[placeId];
                     if (newPlaceId) {
-                        await axios.post('/event-location', null, {
-                            params: {
-                                eventid: newEventId,
-                                locationid: newPlaceId
-                            }
+                        await axios.post('/event-location', {
+                            eventid: newEventId,
+                            locationid: newPlaceId
                         });
                     }
                 }

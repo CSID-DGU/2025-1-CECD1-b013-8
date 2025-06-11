@@ -1,7 +1,9 @@
 package b013.archive.backend.service;
 
+import b013.archive.backend.data.dto.EventDto;
 import b013.archive.backend.data.dto.EventLocationDto;
 import b013.archive.backend.data.dto.LocationDto;
+import b013.archive.backend.data.entity.Event;
 import b013.archive.backend.data.entity.EventLocation;
 import b013.archive.backend.data.entity.Location;
 import b013.archive.backend.data.repository.EventLocationRepository;
@@ -17,8 +19,10 @@ public class EventLocationService {
     private EventLocationRepository eventLocationRepository;
 
     // 사건-장소 연결
-    public void linkEventLocation(int event_id, int location_id) {
-        eventLocationRepository.saveByCompositeId(event_id, location_id);
+    public EventLocation linkEventLocation(EventLocationDto.EventLocationSaveDto requestDto) {
+        EventLocation eventLocation = requestDto.toEntity();
+
+        return eventLocationRepository.save(eventLocation);
     }
 
     public List<EventLocationDto.EventLocationResponseDto> getAllEventLocation() {

@@ -15,8 +15,10 @@ public class EventTimeService {
     private EventTimeRepository eventTimeRepository;
 
     // 사건-시간 연결
-    public void linkEventTime(int event_id, int time_id) {
-        eventTimeRepository.saveByCompositeId(event_id, time_id);
+    public EventTime linkEventTime(EventTimeDto.EventTimeSaveDto requestDto) {
+        EventTime eventTime = requestDto.toEntity();
+
+        return eventTimeRepository.save(eventTime);
     }
     
     public List<EventTimeDto.EventTimeResponseDto> getAllEventTime() {
