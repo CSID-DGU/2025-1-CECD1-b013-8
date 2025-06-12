@@ -44,7 +44,7 @@ public class UserDto {
     @AllArgsConstructor
     public static class UserResponseDto{
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
-        private int id;
+        private Long id;
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
         private String username;
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)

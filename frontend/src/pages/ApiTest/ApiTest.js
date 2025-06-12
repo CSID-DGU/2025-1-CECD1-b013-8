@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import OpenAI from "openai";
-import jsonData from '../../assets/autobiographyData.json'; // JSON 파일 import
 import DataImporter from '../../components/common/DataImporter/DataImporter'
+
+import jsonData from '../../assets/data/autobiographyData.json'; // JSON 파일 import
 
 import "./ApiTest.css";
 
@@ -18,13 +19,18 @@ const ApiTest = () => {
     const [selectedFile, setSelectedFile] = useState("");
     const [selectedModel, setSelectedModel] = useState("gpt-4.1"); // 기본 모델
 
-    useEffect(() => {
-        setResult(JSON.stringify(jsonData, null, 2));
-        console.log(jsonData);
-    }, []);
+    // useEffect(() => {
+    //     setResult(JSON.stringify(jsonData, null, 2));
+    //     console.log(jsonData);
+    // }, []);
 
     // 요청 버튼
     const handleSend = async () => {
+        setResult(JSON.stringify(jsonData, null, 2)); // 임시
+        console.log(jsonData);
+
+        return;
+
         setLoading(true);
         console.log("모델: " + selectedModel + "\n프롬프트: \n" + systemPrompt);
 
@@ -102,33 +108,26 @@ const ApiTest = () => {
                     </div>
                 </div>
 
-                {/* 파일 업로드 영역 */}
-                <div className="fileUploadArea">
-                    <label htmlFor="fileUpload" className="fileUploadLabel">
-                        📎 파일 업로드
-                    </label>
-                    <input
-                        id="fileUpload"
-                        type="file"
-                        accept=".pdf"
-                        onChange={handleFileChange}
-                        className="fileInput"
-                    />
-                    {selectedFile && <p className="fileName">선택됨: {selectedFile.name}</p>}
-                </div>
+                <div className="chat-footer-container">
+                    {/* 파일 업로드 영역 */}
+                    <div className="fileUploadArea">
+                        <label htmlFor="fileUpload" className="fileUploadLabel">
+                            📎 파일 업로드
+                        </label>
+                        <input
+                            id="fileUpload"
+                            type="file"
+                            accept=".pdf"
+                            onChange={handleFileChange}
+                            className="fileInput"
+                        />
+                        {selectedFile && <p className="fileName">선택됨: {selectedFile.name}</p>}
+                    </div>
 
-                <div className="inputArea">
-                    <textarea
-                        className="user-textarea"
-                        placeholder="메시지를 입력하세요..."
-                        value={userMessage}
-                        onChange={(e) => setUserMessage(e.target.value)}
-                    />
+                    <button className="sendBtn" onClick={handleSend} disabled={loading}>
+                        {loading ? ". . ." : "➜"}
+                    </button>
                 </div>
-
-                <button className="sendBtn" onClick={handleSend} disabled={loading}>
-                    {loading ? ". . ." : "➜"}
-                </button>
             </div>
 
             <div className="resultArea">
@@ -138,7 +137,7 @@ const ApiTest = () => {
                     readOnly
                     value={result}
                 />
-                <DataImporter data={jsonData} />
+                <DataImporter jsonData={jsonData} />
             </div>
         </div>
     );

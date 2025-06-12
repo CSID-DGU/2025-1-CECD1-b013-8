@@ -1,25 +1,33 @@
-import React, { useState } from "react";
+import React from "react";
 import PDFViewer from "../../components/PDFViewer/PDFViewer";
+import PdfFile from "../../assets/250220_방명국T_내지.pdf";
 
-function AutobioViewer() {
-  const [pageNumber, setPageNumber] = useState(1);
-  const [numPages, setNumPages] = useState(150);
-  const [scale, setScale] = useState(1.0);
-  const file = "/250220_방명국T_내지.pdf";
+const AutobioViewer = ({
+  pageNumber,
+  numPages,
+  scale,
+  onPageChange,
+  onZoomIn,
+  onZoomOut,
+  onResetZoom,
+  onPreviousPage,
+  onNextPage,
+}) => {
   return (
     <PDFViewer
-      file={file}
+      file={PdfFile}
       title="동막골 소년의 고백"
       pageNumber={pageNumber}
       numPages={numPages}
-      onPageChange={(num) => setPageNumber(num)}
-      onZoomIn={() => setScale((s) => Math.min(s + 0.1, 2))}
-      onZoomOut={() => setScale((s) => Math.max(s - 0.1, 0.5))}
-      onResetZoom={() => setScale(1.0)}
-      onPreviousPage={() => setPageNumber((prev) => Math.max(prev - 1, 1))}
-      onNextPage={() => setPageNumber((prev) => Math.min(prev + 1, numPages))}
+      onPageChange={onPageChange}
+      onZoomIn={onZoomIn}
+      onZoomOut={onZoomOut}
+      onResetZoom={onResetZoom}
+      onPreviousPage={onPreviousPage}
+      onNextPage={onNextPage}
       scale={scale}
     />
   );
-}
+};
+
 export default AutobioViewer;

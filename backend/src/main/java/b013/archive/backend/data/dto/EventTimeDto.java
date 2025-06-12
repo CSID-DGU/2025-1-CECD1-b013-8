@@ -28,7 +28,7 @@ public class EventTimeDto {
     @AllArgsConstructor
     public static class EventTimeResponseDto {
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
-        private int id;
+        private Long id;
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
         private Event event;
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)

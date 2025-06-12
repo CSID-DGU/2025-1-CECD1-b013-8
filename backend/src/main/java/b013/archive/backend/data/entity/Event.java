@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class Event implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment
-    private int id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name="autobiography_id", referencedColumnName="id")
@@ -22,10 +22,10 @@ public class Event implements Serializable {
 
     private String name;
 
-    private int page;
+    private Long page;
 
     @Builder
-    protected Event(Autobiography autobiography, String name, int page) {
+    protected Event(Autobiography autobiography, String name, Long page) {
         this.autobiography = autobiography;
         this.name = name;
         this.page = page;

@@ -12,7 +12,7 @@ public class EventDto {
     public static class EventSaveDto{
         private Autobiography autobiography;
         private String name;
-        private int page;
+        private Long page;
 
         public Event toEntity() {
             return Event.builder()
@@ -30,13 +30,13 @@ public class EventDto {
     @AllArgsConstructor
     public static class EventResponseDto{
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
-        private int id;
+        private Long id;
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
         private Autobiography autobiography;
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
         private String name;
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
-        private int page;
+        private Long page;
 
         public EventResponseDto(Event event) {
             this.id = event.getId();

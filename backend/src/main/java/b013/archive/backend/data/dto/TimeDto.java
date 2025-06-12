@@ -31,7 +31,7 @@ public class TimeDto {
     @AllArgsConstructor
     public static class TimeResponseDto{
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
-        private int id;
+        private Long id;
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
         private String year;
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)

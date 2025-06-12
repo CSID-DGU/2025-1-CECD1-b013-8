@@ -4,7 +4,7 @@ import Button from "../common/Button/Button";
 import "./PDFViewer.css";
 import Input from "../common/Input/Input";
 
-function PDFViewer({
+const PDFViewer= ({
   file,
   title,
   pageNumber,
@@ -16,7 +16,7 @@ function PDFViewer({
   onPreviousPage,
   onNextPage,
   scale,
-}) {
+}) => {
   return (
     <div className="pdf-viewer-container">
       <div className="pdf-viewer-header">

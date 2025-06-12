@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class EventLocation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment
-    private int id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name="event_id", referencedColumnName="id")

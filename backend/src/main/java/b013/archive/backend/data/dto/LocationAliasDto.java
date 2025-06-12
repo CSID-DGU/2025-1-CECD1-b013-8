@@ -27,7 +27,7 @@ public class LocationAliasDto {
     @AllArgsConstructor
     public static class LocationAliasResponseDto {
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
-        private int id;
+        private Long id;
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
         private Location location;
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)

@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class Time implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment
-    private int id;
+    private Long id;
 
     private String year;
     private String month;

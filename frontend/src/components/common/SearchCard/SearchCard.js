@@ -1,40 +1,24 @@
 import React, { useState } from 'react';
 import './SearchCard.css';
 
-function SearchCard() {
-  const [isExpanded, setIsExpanded] = useState(true);
+function SearchCard({ eventData, setPageNumber, onClickSearchKeyword, setClickedKeyword }) {
+  const [isExpanded, setIsExpanded] = useState(false);
 
-  const title = "입대 집결"
-  const page = 24
+  console.log(eventData);
 
   // 오브젝트 리스트로 데이터 관리
   const sections = [
     {
       title: "인물",
-      items: [
-        { id: 1, content: "화자(재호)" },
-        { id: 2, content: "입영자들" },
-        { id: 3, content: "입영자들1" },
-        { id: 4, content: "입영자들2" },
-        { id: 3, content: "입영자들1123" },
-        { id: 3, content: "입영자들1123123" },
-        { id: 3, content: "입영자들112" },
-        { id: 3, content: "입영자들1123" },
-        { id: 3, content: "입영자들122" },
-      ]
+      items: [...eventData.persons].sort((a, b) => a.id - b.id)
     },
     {
       title: "장소",
-      items: [
-        { id: 1, content: "만안국민학교" },
-        { id: 2, content: "안양역" }
-      ]
+      items: [...eventData.locations].sort((a, b) => a.id - b.id)
     },
     {
       title: "시간",
-      items: [
-        { id: 1, content: "1975-08-26" }
-      ]
+      items: []
     }
   ];
 
@@ -42,11 +26,21 @@ function SearchCard() {
     setIsExpanded(!isExpanded);
   };
 
+  const handleSearchClickedKeyword = (section, item) => {
+    const clickedItem = {
+      title: section.title,
+      ...item
+    };
+
+    onClickSearchKeyword(item.name);
+    setClickedKeyword(clickedItem);
+  };
+
   return (
     <div className="detail-card-container">
       <div className={`detail-card ${isExpanded ? 'expanded' : 'collapsed'}`}>
         <div className="detail-card-header">
-          <div className="detail-card-title">{title}</div>
+          <div className="detail-card-title">{eventData.name}</div>
           <button
             className={`detail-toggle-button ${isExpanded ? 'up' : 'down'}`}
             onClick={toggleCard}
@@ -61,20 +55,24 @@ function SearchCard() {
           <div className="detail-card-content">
             {sections.map((section) => (
               <div className="detail-section" key={section.title}>
-                <div className="detail-section-title">{section.title}</div>
+                {section.items.length > 0 && (
+                  <div className="detail-section-title">{section.title}</div>
+                )}
                 <ul className="detail-item-list">
                   {section.items.map((item) => (
-                    <li className="detail-item" key={item.id}>
-                      {item.content}
+                    <li className="detail-item"
+                      key={item.id}
+                      onClick={() => handleSearchClickedKeyword(section, item)}>
+                      {item.name}
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
 
-            <div className="detail-move-section">
+            <div className="detail-move-section" onClick={() => setPageNumber(eventData.page)}>
               <div className="detail-arrow-icon">➔</div>
-              <div className="detail-move-text">{page} 페이지로 이동</div>
+              <div className="detail-move-text">{eventData.page} 페이지로 이동</div>
             </div>
           </div>
         </div>

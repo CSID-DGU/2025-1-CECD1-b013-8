@@ -15,7 +15,7 @@ import java.io.Serializable;
 public class Autobiography implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment
-    private int id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name="user_id", referencedColumnName="id")

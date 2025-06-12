@@ -13,6 +13,7 @@
 .chatBubble {
     background-color: white;
     border-radius: 16px;
+    height: 91.5%;
     padding: 16px;
     margin: 12px 0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -41,8 +42,8 @@
 .inputArea {
     display: flex;
     gap: 8px;
-    margin-top: 20px;
     align-items: center;
+    height: 100%;
 }
 
 .resultArea {
@@ -61,7 +62,7 @@
     border-radius: 12px;
     border: 1px solid #ccc;
     resize: none;
-    min-height: 50vh;
+    height: 92%;
 }
 
 .user-textarea {
@@ -83,31 +84,38 @@
     min-height: 75vh;
 }
 
+.chat-footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .fileUploadArea {
     margin: 16px 0;
-  }
-  
-  .fileUploadLabel {
+}
+
+.fileUploadLabel {
     display: inline-block;
     padding: 8px 12px;
     background-color: #ddd;
     border-radius: 8px;
     cursor: pointer;
     font-size: 14px;
-  }
-  
-  .fileInput {
+}
+
+.fileInput {
     display: none;
-  }
-  
-  .fileName {
+}
+
+.fileName {
     font-size: 13px;
     margin-top: 4px;
     color: #555;
-  }
+}
 
 .sendBtn {
-    margin-top: 10px;
+    height: 50%;
+    margin-top: 17px;
     padding: 10px 16px;
     border: none;
     border-radius: 12px;

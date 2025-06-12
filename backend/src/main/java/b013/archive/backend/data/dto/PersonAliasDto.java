@@ -27,7 +27,7 @@ public class PersonAliasDto {
     @AllArgsConstructor
     public static class PersonAliasResponseDto {
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
-        private int id;
+        private Long id;
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
         private Person person;
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)

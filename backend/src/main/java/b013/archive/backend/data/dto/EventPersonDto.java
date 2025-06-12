@@ -28,7 +28,7 @@ public class EventPersonDto {
     @AllArgsConstructor
     public static class EventPersonResponseDto {
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
-        private int id;
+        private Long id;
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
         private Event event;
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)

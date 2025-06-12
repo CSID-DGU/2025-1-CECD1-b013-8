@@ -17,7 +17,7 @@ import org.springframework.data.annotation.*;
 public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment
-    private int id;
+    private Long id;
 
     private String username;
     private String password;
